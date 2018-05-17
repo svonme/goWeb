@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Martini test: {{ current }}</title>
+    {{ if .title }}
+      <title>{{ .title }}</title>
+    {{ else }}
+      <title>Martini: {{ current }}</title>
+    {{ end }}
   </head>
   <body>
     {{ yield }}
